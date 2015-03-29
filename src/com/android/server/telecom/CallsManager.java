@@ -387,6 +387,10 @@ public final class CallsManager extends Call.ListenerBase {
         return mCallAudioManager.getAudioState();
     }
 
+    void resetAudioStreamVolume() {
+        mCallAudioManager.resetAudioStreamVolume();
+    }
+
     boolean isTtySupported() {
         return mTtyManager.isTtySupported();
     }

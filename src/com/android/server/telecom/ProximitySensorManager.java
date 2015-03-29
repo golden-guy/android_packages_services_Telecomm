@@ -63,6 +63,8 @@ public class ProximitySensorManager extends CallsManagerListenerBase {
         if (!mProximityWakeLock.isHeld()) {
             Log.i(this, "Acquiring proximity wake lock");
             mProximityWakeLock.acquire();
+            // Reset audio stream volume when call is off hook
+            CallsManager.getInstance().resetAudioStreamVolume();
         } else {
             Log.i(this, "Proximity wake lock already acquired");
         }
