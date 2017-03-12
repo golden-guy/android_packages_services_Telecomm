@@ -334,6 +334,7 @@ final class CallAudioManager extends CallsManagerListenerBase
             turnOnBluetooth(false);
             turnOnSpeaker(false);
         }
+        resetAudioStreamVolume();
 
         if (!oldAudioState.equals(mAudioState)) {
             CallsManager.getInstance().onAudioStateChanged(oldAudioState, mAudioState);
